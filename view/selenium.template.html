@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebDriver Test Results for Selenium Tests</title>
+    <link href="/css/style.css" rel="stylesheet" />
+    <script src="/script/utilities.js">
+    </script>
+  </head>
+  <body>
+    <h1>Selenium WebDriver Test Results</h1>
+    <div id="summary">
+      <h2>Result Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="summary">Driver Type</th>
+            <th class="summary">Browser Version</th>
+            <th class="summary">Driver Version</th>
+            <th class="summary">Total Tests</th>
+            <th class="summary">Skip</th>
+            <th class="summary">Pass</th>
+            <th class="summary">Fail</th>
+            <th class="summary">Pass Rate</th>
+            <th class="summary">Duration (sec)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each summary}}
+          <tr>
+            <td>{{this.description}}</td>
+            <td>{{this.browser}}</td>
+            <td>{{this.driver}}</td>
+            <td class="numeric">{{this.total}}</td>
+            <td class="numeric">{{this.skipped}}</td>
+            <td class="numeric">{{this.passed}}</td>
+            <td class="numeric">{{this.failed}}</td>
+            <td class="numeric">{{this.passrate}}%</td>
+            <td class="numeric">{{this.duration}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div id="notes">
+      <h2>Notes</h2>
+      <ul>
+        <li>Tests were executed on {{rundate}}</li>
+        <li>Tests were run from the .NET bindings tests of the Selenium project master branch. Tests and language bindings code current as of commit {{commit}}</li>
+        <li>Except for Safari, tests were run on {{windowsVersion}}</li>
+        <li>Safari tests were run on {{macOSVersion}}</li>
+      </ul>
+    </div>
+    <div id="crosstab">
+      <h2>Test Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test Name</th>
+            {{#each crosstab.browsers}}
+            <th class="rotate"><div><span>{{this}}</span></div></th>
+            {{/each}}
+          </tr>
+        </thead>
+        <tbody>
+          {{#each crosstab.tests}}
+          <tr>
+            <td>{{this.shortName}}</td>
+            {{#each this.results}}
+            {{#if reason}}
+            <td>
+              <div class="{{this.status}}" onmouseover="showReason(this)" onmouseout="hideReason(this)">
+                &nbsp;
+                <div class="hidden"><pre>{{@key}}:<br>{{reason}}</pre></div>
+              </div>
+            </td>
+            {{else}}
+            <td>
+              <div class="{{this.status}}-missing" onmouseover="showReason" onmouseout="hideReason">
+                &nbsp;
+                <div class="hidden">No reason given</div>
+              </div>
+            </td>
+            {{/if}}
+            {{/each}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

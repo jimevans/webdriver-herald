@@ -1,0 +1,75 @@
+div.passed {
+  background-color: green;
+  width: 30px;
+  height: 20px;
+}
+
+div.failed {
+  background-color: red;
+  width: 30px;
+  height: 20px;
+}
+
+div.skipped {
+  background-color: yellow;
+  width: 30px;
+  height: 20px;
+}
+
+div.failed-missing {
+  background-color: darkred;
+  width: 30px;
+  height: 20px;
+}
+
+div.skipped-missing {
+  background-color: gold;
+  width: 30px;
+  height: 20px;
+}
+
+th.rotate {
+  height: 140px;
+  white-space: nowrap;
+}
+
+th.rotate > div {
+  transform: translate(25px, 51px)
+             rotate(315deg);
+  width: 30px;
+}
+
+th.rotate > div > span {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+th.summary {
+  text-align: left;
+  vertical-align: bottom;
+}
+
+td.numeric {
+  text-align: right;
+}
+
+div.hidden {
+  display: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+div.shown {
+  display: block;
+  position: relative;
+  bottom: 30px;
+  right: 400px;
+  font-family: monospace;
+  background-color: white;
+  border-color: black;
+  border: solid;
+  width: 400px;
+  height: auto;
+}
