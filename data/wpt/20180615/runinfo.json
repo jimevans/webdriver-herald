@@ -1,0 +1,31 @@
+{
+  "rundate": "15 June 2018",
+  "commit": "f3bc9cfcbb9a0c5bbebc549ad37d93e2cf26167c",
+  "windowsVersion": "Windows 10, Insider build 17692",
+  "macOSVersion": "macOS High Sierra (10.13.5)",
+  "notes": [
+    "Microsoft Edge and Apple Safari implementations fail to run the WPT test suite to completion without manual intervention, so no results are reported for them at present."
+  ],
+  "browsers": {
+    "ie": {
+      "description": "IE",
+      "browser": "Microsoft Internet Explorer (11.0.47)",
+      "driver": "IEDriverServer.exe (3.12.0.4)"
+    },
+    "firefox": {
+      "description": "Firefox",
+      "browser": "Mozilla Firefox Release (60.0.1)",
+      "driver": "geckodriver.exe (0.20.1)"
+    },
+    "firefoxnightly": {
+      "description": "Firefox Nightly",
+      "browser": "Mozilla Firefox Nightly (62.0a1 [2018-06-05])",
+      "driver": "geckodriver.exe (0.20.1)"
+    },
+    "chrome": {
+      "description": "Chrome",
+      "browser": "Google Chrome (67.0.3396.62)",
+      "driver": "chromedriver.exe (2.40)"
+    }
+  }
+}
