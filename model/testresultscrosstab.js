@@ -11,7 +11,7 @@ module.exports = class TestResultsCrosstab {
           // Make the 'results' property a Map, since the properties
           // are guaranteed to be iterated in insertion order.
           this.tests[testFullName] = {
-            'shortName': testFullName.replace('OpenQA.Selenium.', ''),
+            'shortName': testFullName.replace('OpenQA.Selenium.', '').replace('/webdriver/tests/', ''),
             'results': new Map()
           };
         }

@@ -3,6 +3,7 @@
   "commit": "084ed59c7990ac810e2f614f66ee7610f8cc64df",
   "windowsVersion": "Windows 10, Insider build 17682",
   "macOSVersion": "macOS High Sierra (10.13.5)",
+  "notes": [],
   "browsers": {
     "ie": {
       "description": "IE",

@@ -73,3 +73,7 @@ div.shown {
   width: 400px;
   height: auto;
 }
+
+a.switch {
+  font-size: x-small;
+}

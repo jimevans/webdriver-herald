@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WebDriver Test Results for Selenium Tests</title>
+    <title>WebDriver Test Results for Web Platform Tests</title>
     <link href="/css/style.css" rel="stylesheet" />
     <script src="/script/utilities.js">
     </script>
   </head>
   <body>
-    <h1>Selenium Project WebDriver Test Results</h1>
+    <h1>Web Platform Tests Project WebDriver Test Results</h1>
     <div>
-      <a class="switch" id="wpt" href="/wpt/current">View Web Platform Test results</a>
+      <a class="switch" id="selenium" href="/selenium/current">View Selenium results</a>
     </div>
     <div id="summary">
       <h2>Result Summary</h2>
@@ -48,7 +48,7 @@
       <h2>Notes</h2>
       <ul>
         <li>Tests were executed on {{rundate}}</li>
-        <li>Tests were run from the .NET bindings tests of the <a href="https://github.com/SeleniumHQ/selenium">Selenium project</a> master branch. Tests and language bindings code current as of commit {{commit}}</li>
+        <li>Tests were run from the <a href="https://github.com/web-platform-tests/wpt">web-platform-tests project</a> master branch. Tests current as of commit {{commit}}</li>
         <li>Except for Safari, tests were run on {{windowsVersion}}</li>
         <li>Safari tests were run on {{macOSVersion}}</li>
         {{#each notes}}

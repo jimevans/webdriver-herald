@@ -1,6 +1,6 @@
-const TestCaseResult = require('./testcaseresult.js')
+const SeleniumTestCaseResult = require('./seleniumtestcaseresult.js')
 
-module.exports = class TestResults {
+module.exports = class SeleniumTestResults {
   constructor(browserInfo, testRunData) {
     var assemblySuites = testRunData['test-run']['test-suite'];
     for (var i = 0; i < assemblySuites.length; i++) {
@@ -25,11 +25,11 @@ module.exports = class TestResults {
               var count = parseInt(testClass['@testcasecount']);
               if (count == 1) {
                 var testCase = testClass['test-case'];
-                resultArray.push(new TestCaseResult(testCase));
+                resultArray.push(new SeleniumTestCaseResult(testCase));
               } else {
                 var testMethods = testClass['test-case'];
                 for (var j = 0; j < testMethods.length; j++) {
-                  resultArray.push(new TestCaseResult(testMethods[j]));
+                  resultArray.push(new SeleniumTestCaseResult(testMethods[j]));
                 }
               }
             } else if (testClassType == 'TestSuite') {

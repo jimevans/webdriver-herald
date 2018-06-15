@@ -1,9 +1,9 @@
-module.exports = class TestCaseResult {
+module.exports = class SeleniumTestCaseResult {
   constructor(resultObject) {
     this.status = resultObject['@result'].toLowerCase();
     this.fullname = resultObject['@fullname'];
-    this.classname = resultObject['@classname'];
-    this.methodname = resultObject['@methodname'];
+    this.modulename = resultObject['@classname'];
+    this.testname = resultObject['@methodname'];
     if (this.status == 'skipped') {
       var properties = resultObject['properties'];
       if (properties != null) {
