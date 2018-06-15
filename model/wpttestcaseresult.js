@@ -7,6 +7,9 @@ module.exports = class WptTestCaseResult {
       if (originalStatus.toLowerCase() == 'fail') {
         return 'failed';
       }
+      if (originalStatus.toLowerCase() == 'error') {
+        return 'error';
+      }
     }
     this.status = fixStatus(resultObject['status']);
     this.modulename = fileName;

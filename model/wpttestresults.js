@@ -17,15 +17,17 @@ module.exports = class WptTestResults {
       var testFileSubTestResults = testFileResults[i]['subtests'];
       for (var j = 0; j < testFileSubTestResults.length; j++) {
         var subtestResult = new WptTestCaseResult(fileName, testFileSubTestResults[j]);
-        this.total += 1;
-        if (subtestResult.status == 'passed') {
-          this.passed += 1;
-        } else if (subtestResult.status == 'failed') {
-          this.failed += 1;
-        } else {
-          this.skipped += 1;
+        if (subtestResult.status != 'error') {
+          this.total += 1;
+          if (subtestResult.status == 'passed') {
+            this.passed += 1;
+          } else if (subtestResult.status == 'failed') {
+            this.failed += 1;
+          } else {
+            this.skipped += 1;
+          }
+          this.tests.push(subtestResult);
         }
-        this.tests.push(subtestResult);
       }
     }
     this.tests.sort(function(a, b) { return a.fullname.localeCompare(b.fullname); });
