@@ -42,6 +42,31 @@ exports.render = function(runId) {
   };
 
   const Handlebars = require('handlebars');
+  Handlebars.registerHelper('result', function(results, browsers) {
+    var str = '';
+    for (var i = 0; i < browsers.length; i++) {
+      str += '<td>';
+      var browserDescription = browsers[i];
+      var resultClass = "failed-missing";
+      var resultDescription = browserDescription + "<br>Missing data! No results available!";
+      if (results.hasOwnProperty(browserDescription)) {
+        var browserResult = results[browserDescription];
+        if (browserResult.reason) {
+          resultClass = browserResult.status;
+          resultDescription = browserDescription + ':<br>' + browserResult.reason;
+        } else {
+          resultClass = browserResult.status + '-missing';
+          resultDescription = browserDescription + ':<br>No reason given';
+        }
+      }
+      str += '<div class="' + resultClass + '" onmouseover="showReason(this)" onmouseout="hideReason(this)">';
+      str += '&nbsp';
+      str += '<div class="hidden"><pre>' + resultDescription + '</pre></div>';
+      str += '</div>';
+      str += '</td>';
+    }
+    return str;
+  });
   var fullPageTemplate = Handlebars.compile(fs.readFileSync('./view/wpt.template.html', 'utf-8'));
   var fullPage = fullPageTemplate(pageData);
   return fullPage;

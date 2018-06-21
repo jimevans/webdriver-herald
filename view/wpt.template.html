@@ -58,40 +58,26 @@
     </div>
     <div id="crosstab">
       <h2>Test Results</h2>
+      {{#with crosstab}}
       <table>
         <thead>
           <tr>
             <th>Test Name</th>
-            {{#each crosstab.browsers}}
+            {{#each browsers}}
             <th class="rotate"><div><span>{{this}}</span></div></th>
             {{/each}}
           </tr>
         </thead>
         <tbody>
-          {{#each crosstab.tests}}
+          {{#each tests}}
           <tr>
-            <td>{{this.shortName}}</td>
-            {{#each this.results}}
-            {{#if reason}}
-            <td>
-              <div class="{{this.status}}" onmouseover="showReason(this)" onmouseout="hideReason(this)">
-                &nbsp;
-                <div class="hidden"><pre>{{@key}}:<br>{{reason}}</pre></div>
-              </div>
-            </td>
-            {{else}}
-            <td>
-              <div class="{{this.status}}-missing" onmouseover="showReason" onmouseout="hideReason">
-                &nbsp;
-                <div class="hidden">No reason given</div>
-              </div>
-            </td>
-            {{/if}}
-            {{/each}}
+            <td>{{shortName}}</td>
+            {{{result results ../browsers }}}
           </tr>
           {{/each}}
         </tbody>
       </table>
+      {{/with}}
     </div>
   </body>
 </html>
