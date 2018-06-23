@@ -57,7 +57,18 @@
       </ul>
     </div>
     <div id="crosstab">
-      <h2>Test Results</h2>
+      <h2>Test Results</h2>&nbsp;<span class="showlegend" onclick="document.getElementById('legend').style.display = 'block'">Show legend</span>
+      <div id="legend" class="legend">
+        <span class="legendtitle">Legend</span>&nbsp;<span class="closelegend" onclick="document.getElementById('legend').style.display = 'none'">Close</span><br>
+        <table>
+          <tr><td class="legendblock"><div class="passed"></div></td><td>Test passed</td></tr>
+          <tr><td class="legendblock"><div class="failed"></div></td><td>Test failed</td></tr>
+          <tr><td class="legendblock"><div class="failed-missing"></div></td><td>Test failed, but provided no logged failure message</td></tr>
+          <tr><td class="legendblock"><div class="failed-known"></div></td><td>Test failed, but failure was expected due to browser or driver limitations</td></tr>
+          <tr><td class="legendblock"><div class="skipped"></div></td><td>Test was skipped and not executed</td></tr>
+          <tr><td class="legendblock"><div class="skipped-missing"></div></td><td>Test was skipped and not executed, but no reason for skipping was logged</td></tr>
+        </table>
+      </div>
       <table>
         <thead>
           <tr>
