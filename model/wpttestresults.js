@@ -23,6 +23,10 @@ module.exports = class WptTestResults {
             this.passed += 1;
           } else if (subtestResult.status == 'failed') {
             this.failed += 1;
+            if (browserInfo['knownFailures'].hasOwnProperty(subtestResult.fullname)) {
+              subtestResult.status = 'failed-known';
+              subtestResult.reason = 'Expected failure - ' + browserInfo['knownFailures'][subtestResult.fullname];
+            }
           } else {
             this.skipped += 1;
           }

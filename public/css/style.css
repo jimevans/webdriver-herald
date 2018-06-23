@@ -1,29 +1,41 @@
 div.passed {
   background-color: green;
+  vertical-align: top;
   width: 30px;
   height: 20px;
 }
 
 div.failed {
   background-color: red;
+  vertical-align: top;
   width: 30px;
   height: 20px;
 }
 
 div.skipped {
   background-color: yellow;
+  vertical-align: top;
   width: 30px;
   height: 20px;
 }
 
 div.failed-missing {
   background-color: darkred;
+  vertical-align: top;
   width: 30px;
   height: 20px;
 }
 
 div.skipped-missing {
   background-color: gold;
+  vertical-align: top;
+  width: 30px;
+  height: 20px;
+}
+
+div.failed-known {
+  background-color: lightcoral;
+  vertical-align: top;
   width: 30px;
   height: 20px;
 }
@@ -53,6 +65,10 @@ td.numeric {
   text-align: right;
 }
 
+td.legendblock {
+  vertical-align:top;
+}
+
 div.hidden {
   display: none;
 }
@@ -72,6 +88,24 @@ div.shown {
   border: solid;
   width: 400px;
   height: auto;
+}
+
+div.legend {
+  display: none;
+  position: sticky;
+  top: 20px;
+  width: 400px;
+  background-color: white;
+  border-color: black;
+  border: solid;
+}
+
+span.legendtitle {
+  font-weight: bold;
+}
+
+span.closelegend {
+  float: right;
 }
 
 a.switch {

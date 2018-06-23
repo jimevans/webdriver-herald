@@ -60,7 +60,7 @@ exports.render = function(runId) {
         }
       }
       str += '<div class="' + resultClass + '" onmouseover="showReason(this)" onmouseout="hideReason(this)">';
-      str += '&nbsp';
+      str += '&nbsp;';
       str += '<div class="hidden"><pre>' + resultDescription + '</pre></div>';
       str += '</div>';
       str += '</td>';
