@@ -69,6 +69,14 @@ td.legendblock {
   vertical-align:top;
 }
 
+table#crosstabTable tr:nth-child(odd) {
+  background-color: white;
+}
+
+table#crosstabTable tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
 div.hidden {
   display: none;
 }
