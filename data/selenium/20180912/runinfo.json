@@ -1,0 +1,52 @@
+{
+  "rundate": "12 September 2018",
+  "commit": "d0387d5892373379f3dca545478e8b31ba71c814",
+  "windowsVersion": "Windows 10, Insider build 17758",
+  "macOSVersion": "macOS High Sierra (10.13.6)",
+  "notes": [
+    "IE results were run against Windows 7, due to a blocking Windows 10 Insider build regression",
+    "Results for Edge now no longer track the legacy OSS protocol, as no future development is being done there"
+  ],
+  "browsers": {
+    "ie": {
+      "description": "IE",
+      "browser": "Microsoft Internet Explorer (11.0.9600.19100 [11.0.75])",
+      "driver": "IEDriverServer.exe (3.14.0.5)"
+    },
+    "firefox": {
+      "description": "Firefox",
+      "browser": "Mozilla Firefox Release (62.0)",
+      "driver": "geckodriver.exe (0.21)"
+    },
+    "firefoxnightly": {
+      "description": "Firefox Nightly",
+      "browser": "Mozilla Firefox Nightly (64.0a1 [2018-09-12])",
+      "driver": "geckodriver.exe (0.21)"
+    },
+    "chrome": {
+      "description": "Chrome (OSS protocol mode)",
+      "browser": "Google Chrome (69.0.3497.81)",
+      "driver": "chromedriver.exe (2.41)"
+    },
+    "chromespec": {
+      "description": "Chrome (W3C protocol mode)",
+      "browser": "Google Chrome (69.0.3497.81)",
+      "driver": "chromedriver.exe (2.41)"
+    },
+    "edge": {
+      "description": "Edge",
+      "browser": "Microsoft Edge (44.17758.1000.0/EdgeHTML 17.17758)",
+      "driver": "MicrosoftWebDriver.exe (17758)"
+    },
+    "safari": {
+      "description": "Safari",
+      "browser": "Apple Safari (Version 11.1.2 [13605.3.8])",
+      "driver": "safaridriver (10.1)"
+    },
+    "safaritechpreview": {
+      "description": "Safari Technology Preview",
+      "browser": "Apple Safari Technology Preview release 65 (Safari 12.1, WebKit 13607.1.5.2)",
+      "driver": "safaridriver (10.2)"
+    }
+  }
+}
