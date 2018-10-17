@@ -1,0 +1,107 @@
+{
+  "rundate": "15 October 2018",
+  "commit": "617f510a05620b785bf6d6e178ff41b0dfb8960e",
+  "windowsVersion": "Windows 10, Insider build 18252",
+  "macOSVersion": "macOS High Sierra (10.13.6)",
+  "notes": [
+  ],
+  "browsers": {
+    "ie": {
+      "description": "IE",
+      "browser": "Microsoft Internet Explorer (11.1000.18252.0 [11.0.47])",
+      "driver": "IEDriverServer.exe (3.14.0.14)",
+      "knownFailures": {
+        "/webdriver/tests/element_clear/clear.py/test_input[color-#ff0000-#000000]": "Browser does not support &lt;input type='color'&gt;",
+        "/webdriver/tests/element_click/navigate.py/test_link_unload_event": "Test requires BFCache to be enabled, but driver requires it to be disabled to work properly",
+        "/webdriver/tests/element_send_keys/events.py/test_file_upload": "Browser issues events for file upload in incorrect order ([\"change\", \"input\"] instead of [\"input\", \"change\"])",
+        "/webdriver/tests/element_send_keys/scroll_into_view.py/test_option_stays_outside_of_scrollable_viewport": "Browser does not render &lt;option&gt; elements with padded heights, no matter what style attribute says",
+        "/webdriver/tests/fullscreen_window/fullscreen.py/test_fullscreen": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/fullscreen_window/fullscreen.py/test_fullscreen_twice_is_idempotent": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/fullscreen_window/user_prompts.py/test_accept[capabilities0-alert-None]": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/fullscreen_window/user_prompts.py/test_accept[capabilities0-confirm-True]": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/fullscreen_window/user_prompts.py/test_accept[capabilities0-prompt-]": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/fullscreen_window/user_prompts.py/test_dismiss[capabilities0-alert-None]": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/fullscreen_window/user_prompts.py/test_dismiss[capabilities0-confirm-False]": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/fullscreen_window/user_prompts.py/test_dismiss[capabilities0-prompt-None]": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/get_current_url/get.py/test_get_current_url_file_protocol": "Browser does not navigation to a directory using file://",
+        "/webdriver/tests/get_element_attribute/get.py/test_boolean_attribute[iframe-attrs6]": "Browser does not support element and/or attribute used by tests",
+        "/webdriver/tests/get_element_attribute/get.py/test_boolean_attribute[menuitem-attrs9]": "Browser does not support element and/or attribute used by tests",
+        "/webdriver/tests/get_element_attribute/get.py/test_boolean_attribute[object-attrs10]": "Browser does not support element and/or attribute used by tests",
+        "/webdriver/tests/maximize_window/maximize.py/test_fully_exit_fullscreen": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/minimize_window/minimize.py/test_fully_exit_fullscreen": "Browser does not support Fullscreen API required by test",
+        "/webdriver/tests/perform_actions/key_events.py/test_modifier_key_sends_correct_events[\\ue053-R_META]": "Driver sends key down and up, but browser receives only keydown because Window key activates start menu",
+        "/webdriver/tests/perform_actions/key_events.py/test_non_printable_key_sends_events[\\ue00c-ESCAPE]": "Browser returns incorrect string for Key property of keyboard event (\"Esc\" instead of \"Escape\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_non_printable_key_sends_events[\\ue014-RIGHT]": "Browser returns incorrect string for Key property of keyboard event (\"Right\" instead of \"ArrowRight\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_ARROWRIGHT-expected4]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[ESCAPE-expected5]": "Browser returns incorrect string for Key property of keyboard event (\"Esc\" instead of \"Escape\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_PAGEUP-expected7]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[UP-expected8]": "Browser returns incorrect string for Key property of keyboard event (\"Up\" instead of \"ArrowUp\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[DOWN-expected9]": "Browser returns incorrect string for Key property of keyboard event (\"Down\" instead of \"ArrowDown\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[META-expected11]": "Meta key on Windows invokes the start menu, and is not propagated to the browser",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[MULTIPLY-expected13]": "Browser returns incorrect string for Key property of keyboard event (\"Multiply\" instead of \"*\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[NULL-expected15]": "Windows OS does not support key",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[SUBTRACT-expected16]": "Browser returns incorrect string for Key property of keyboard event (\"Subtract\" instead of \"-\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_META-expected19]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[SPACE-expected21]": "Browser returns incorrect string for Key property of keyboard event (\"Spacebar\" instead of \" \")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[RIGHT-expected23]": "Browser returns incorrect string for Key property of keyboard event (\"Right\" instead of \"ArrowRight\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[DECIMAL-expected27]": "Browser returns incorrect string for Key property of keyboard event (\"Decimal\" instead of \".\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[LEFT-expected28]": "Browser returns incorrect string for Key property of keyboard event (\"Left\" instead of \"ArrowLeft\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_DELETE-expected29]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[DIVIDE-expected33]": "Browser returns incorrect string for Key property of keyboard event (\"Divide\" instead of \"/\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_ARROWUP-expected34]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_ARROWLEFT-expected37]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_PAGEDOWN-expected39]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[ADD-expected40]": "Browser returns incorrect string for Key property of keyboard event (\"Add\" instead of \"+\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_INSERT-expected42]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[ENTER-expected43]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[CANCEL-expected44]": "Windows OS does not support key",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_END-expected48]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_HOME-expected63]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[ZENKAKUHANKAKU-expected64]": "Windows OS does not support key",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[SEPARATOR-expected66]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_ARROWDOWN-expected68]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[DELETE-expected69]": "Browser returns incorrect string for Key property of keyboard event (\"Del\" instead of \"Delete\")",
+        "/webdriver/tests/perform_actions/key_special_keys.py/test_codepoint_keys_behave_correctly[\\u1100\\u1161\\u11a8]": "Test expects browser to render decomposed character, when rendering the composed form is perfectly acceptable",
+        "/webdriver/tests/perform_actions/pointer_modifier_click.py/test_modifier_click[\\ue03d-metaKey]": "Meta key on Windows invokes the start menu, and is not propagated to the browser",
+        "/webdriver/tests/perform_actions/pointer_modifier_click.py/test_modifier_click[\\ue053-metaKey]": "Meta key on Windows invokes the start menu, and is not propagated to the browser",
+        "/webdriver/tests/set_window_rect/set.py/test_fully_exit_fullscreen": "Browser does not support Fullscreen API required by test"
+      }
+    },
+    "firefox": {
+      "description": "Firefox",
+      "browser": "Mozilla Firefox Release (62.0.3)",
+      "driver": "geckodriver.exe (0.23)",
+      "knownFailures": {}
+    },
+    "firefoxnightly": {
+      "description": "Firefox Nightly",
+      "browser": "Mozilla Firefox Nightly (64.0a1 [2018-10-15])",
+      "driver": "geckodriver.exe (0.23)",
+      "knownFailures": {}
+    },
+    "chrome": {
+      "description": "Chrome (W3C protocol mode)",
+      "browser": "Google Chrome (70.0.3538.67)",
+      "driver": "chromedriver.exe (2.43)",
+      "knownFailures": {}
+    },
+    "edge": {
+      "description": "Edge",
+      "browser": "Microsoft Edge (44.18252.1000.0/EdgeHTML 17.18252)",
+      "driver": "MicrosoftWebDriver.exe (18252)",
+      "knownFailures": {}
+    },
+    "safari": {
+      "description": "Safari",
+      "browser": "Apple Safari (12.0, WebKit 13606.2.11)",
+      "driver": "safaridriver (12.0)",
+      "knownFailures": {}
+    },
+    "safaritechpreview": {
+      "description": "Safari Tech Preview",
+      "browser": "Apple Safari Technology Preview Release 67 (Safari 12.1, WebKit 13607.1.9.0.1)",
+      "driver": "safaridriver (12.1)",
+      "knownFailures": {}
+    }
+  }
+}
