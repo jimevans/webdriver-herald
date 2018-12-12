@@ -1,0 +1,50 @@
+{
+  "rundate": "12 December 2018",
+  "commit": "34684942b179ded3b0a872ca74bc30bc0040f418",
+  "windowsVersion": "Windows 10, Insider build 18298",
+  "macOSVersion": "macOS High Sierra (10.13.6)",
+  "notes": [
+  ],
+  "browsers": {
+    "ie": {
+      "description": "IE",
+      "browser": "Microsoft Internet Explorer (11.1000.18298.0 [11.0.100])",
+      "driver": "IEDriverServer.exe (3.141.0.2)"
+    },
+    "firefox": {
+      "description": "Firefox",
+      "browser": "Mozilla Firefox Release (64.0)",
+      "driver": "geckodriver.exe (0.23)"
+    },
+    "firefoxnightly": {
+      "description": "Firefox Nightly",
+      "browser": "Mozilla Firefox Nightly (66.0a1 [2018-12-12])",
+      "driver": "geckodriver.exe (0.23)"
+    },
+    "chrome": {
+      "description": "Chrome (OSS protocol mode)",
+      "browser": "Google Chrome (71.0.3578.98)",
+      "driver": "chromedriver.exe (2.45)"
+    },
+    "chromespec": {
+      "description": "Chrome (W3C protocol mode)",
+      "browser": "Google Chrome (71.0.3578.98)",
+      "driver": "chromedriver.exe (2.45)"
+    },
+    "edge": {
+      "description": "Edge",
+      "browser": "Microsoft Edge (44.18298.1000.0/EdgeHTML 18.18298)",
+      "driver": "MicrosoftWebDriver.exe (18298)"
+    },
+    "safari": {
+      "description": "Safari",
+      "browser": "Apple Safari (12.0.2, WebKit 13606.3.4.1.4)",
+      "driver": "safaridriver (12.0)"
+    },
+    "safaritechpreview": {
+      "description": "Safari Tech Preview",
+      "browser": "Apple Safari Technology Preview Release 71 (Safari 12.1, WebKit 13607.1.15)",
+      "driver": "safaridriver (12.1)"
+    }
+  }
+}
