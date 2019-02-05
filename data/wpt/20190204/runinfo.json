@@ -1,0 +1,75 @@
+{
+  "rundate": "04 February 2019",
+  "commit": "926b6f3559fc9d3e18457371dcf7bc49261a90c3",
+  "windowsVersion": "Windows 10, Insider build 18329",
+  "macOSVersion": "macOS High Sierra (10.13.6)",
+  "notes": [
+    "Tests under the permissions directory are now excluded, as they test features not part of the WebDriver Specification"
+  ],
+  "browsers": {
+    "ie": {
+      "description": "IE",
+      "browser": "Microsoft Internet Explorer (11.1.18329.0 [11.0.110])",
+      "driver": "IEDriverServer.exe (3.141.5.7)",
+      "knownFailures": {
+        "/webdriver/tests/element_clear/clear.py/test_contenteditable": "Element with contentEditable gets set to '\r\n' when cleared, instead of empty string",
+        "/webdriver/tests/element_clear/clear.py/test_designmode": "Browser disconnects external script engines (including the driver) when document is put in design mode",
+        "/webdriver/tests/element_clear/clear.py/test_input[color-#ff0000-#000000]": "Browser does not support &lt;input type='color'&gt;",
+        "/webdriver/tests/element_click/navigate.py/test_link_unload_event": "Test requires BFCache to be enabled, but driver requires it to be disabled to work properly",
+        "/webdriver/tests/element_send_keys/events.py/test_file_upload": "Browser issues events for file upload in incorrect order ([\"change\", \"input\"] instead of [\"input\", \"change\"])",
+        "/webdriver/tests/element_send_keys/scroll_into_view.py/test_option_stays_outside_of_scrollable_viewport": "Browser does not render &lt;option&gt; elements with padded heights, no matter what style attribute says",
+        "/webdriver/tests/execute_script/promise.py/test_await_promise_resolve": "Browser does not support Promises API",
+        "/webdriver/tests/execute_script/promise.py/test_promise_all_resolve": "Browser does not support Promises API",
+        "/webdriver/tests/execute_script/promise.py/test_promise_reject_timeout": "Browser does not support Promises API",
+        "/webdriver/tests/execute_script/promise.py/test_promise_resolve": "Browser does not support Promises API",
+        "/webdriver/tests/execute_script/promise.py/test_promise_resolve_delayed": "Browser does not support Promises API",
+        "/webdriver/tests/execute_script/promise.py/test_promise_resolve_timeout": "Browser does not support Promises API",
+        "/webdriver/tests/get_current_url/get.py/test_get_current_url_file_protocol": "Browser does not navigation to a directory using file://",
+        "/webdriver/tests/perform_actions/key_events.py/test_modifier_key_sends_correct_events[\\ue03d-META]": "Driver sends key down and up, but browser receives only keydown because Window key activates start menu",
+        "/webdriver/tests/perform_actions/key_events.py/test_modifier_key_sends_correct_events[\\ue053-R_META]": "Driver sends key down and up, but browser receives only keydown because Window key activates start menu",
+        "/webdriver/tests/perform_actions/key_events.py/test_non_printable_key_sends_events[\\ue00c-ESCAPE]": "Browser returns incorrect value for \"key\" property of keypress event (\"0x1b\" instead of \"Escape\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[CANCEL-expected44]": "Windows OS does not support key",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[ENTER-expected43]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[ESCAPE-expected5]": "Browser returns incorrect string for Key property of keyboard event (\"Esc\" instead of \"Escape\")",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[META-expected11]": "Meta key on Windows invokes the start menu, and is not propagated to the browser",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[NULL-expected15]": "Windows OS does not support key",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[R_META-expected19]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[SEPARATOR-expected66]": "Browser cannot be made to generate correct value for \"location\" property of keyboard event",
+        "/webdriver/tests/perform_actions/key_events.py/test_special_key_sends_keydown[ZENKAKUHANKAKU-expected64]": "Windows OS does not support key",
+        "/webdriver/tests/perform_actions/key_special_keys.py/test_codepoint_keys_behave_correctly[\\u1100\\u1161\\u11a8]": "Test expects browser to render decomposed character, when rendering the composed form is perfectly acceptable",
+        "/webdriver/tests/perform_actions/pointer_modifier_click.py/test_modifier_click[\\ue03d-metaKey]": "Meta key on Windows invokes the start menu, and is not propagated to the browser",
+        "/webdriver/tests/perform_actions/pointer_modifier_click.py/test_modifier_click[\\ue053-metaKey]": "Meta key on Windows invokes the start menu, and is not propagated to the browser"
+      }
+    },
+    "firefox": {
+      "description": "Firefox",
+      "browser": "Mozilla Firefox Release (65.0)",
+      "driver": "geckodriver.exe (0.24)",
+      "knownFailures": {}
+    },
+    "firefoxnightly": {
+      "description": "Firefox Nightly",
+      "browser": "Mozilla Firefox Nightly (67.0a1 [2019-02-04])",
+      "driver": "geckodriver.exe (0.24)",
+      "knownFailures": {}
+    },
+    "chrome": {
+      "description": "Chrome (W3C protocol mode)",
+      "browser": "Google Chrome (72.0.3626.81)",
+      "driver": "chromedriver.exe (2.46)",
+      "knownFailures": {}
+    },
+    "edge": {
+      "description": "Edge",
+      "browser": "Microsoft Edge (44.18329.1.0/EdgeHTML 18.18329)",
+      "driver": "MicrosoftWebDriver.exe (18298)",
+      "knownFailures": {}
+    },
+    "safari": {
+      "description": "Safari Tech Preview",
+      "browser": "Apple Safari Technology Preview Release 74 (Safari 12.2, WebKit 13608.1.1.1)",
+      "driver": "safaridriver (12.1)",
+      "knownFailures": {}
+    }
+  }
+}
