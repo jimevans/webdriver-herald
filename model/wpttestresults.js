@@ -22,10 +22,12 @@ module.exports = class WptTestResults {
           if (subtestResult.status == 'passed') {
             this.passed += 1;
           } else if (subtestResult.status == 'failed') {
-            this.failed += 1;
             if (browserInfo['knownFailures'].hasOwnProperty(subtestResult.fullname)) {
               subtestResult.status = 'failed-known';
               subtestResult.reason = 'Expected failure - ' + browserInfo['knownFailures'][subtestResult.fullname];
+              this.skipped += 1;
+            } else {
+              this.failed += 1;
             }
           } else {
             this.skipped += 1;
