@@ -5,7 +5,7 @@ module.exports = class SeleniumTestResults {
     var assemblySuites = testRunData['test-run']['test-suite'];
     for (var i = 0; i < assemblySuites.length; i++) {
       var testSuiteSummary = assemblySuites[i];
-      if (testSuiteSummary['@name'] == 'WebDriver.Common.Tests.dll') {
+      if (testSuiteSummary['@name'] === 'WebDriver.Common.Tests.dll') {
         this.description = browserInfo['description'];
         this.browser = browserInfo['browser'];
         this.driver = browserInfo['driver'];
@@ -28,8 +28,10 @@ module.exports = class SeleniumTestResults {
                 resultArray.push(new SeleniumTestCaseResult(testCase));
               } else {
                 var testMethods = testClass['test-case'];
-                for (var j = 0; j < testMethods.length; j++) {
-                  resultArray.push(new SeleniumTestCaseResult(testMethods[j]));
+                if (testMethods) {
+                  for (var j = 0; j < testMethods.length; j++) {
+                    resultArray.push(new SeleniumTestCaseResult(testMethods[j]));
+                  }
                 }
               }
             } else if (testClassType == 'TestSuite') {
