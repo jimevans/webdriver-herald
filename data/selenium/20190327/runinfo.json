@@ -1,0 +1,55 @@
+{
+  "rundate": "27 March 2019",
+  "commit": "57555ac350423fbeb1138569963bdf6f57faf59b",
+  "windowsVersion": "Windows 10, Insider build 18362",
+  "macOSVersion": "macOS Mojave (10.14.4)",
+  "notes": [
+  ],
+  "browsers": {
+    "ie": {
+      "description": "IE",
+      "browser": "Microsoft Internet Explorer (11.1.18362.0 [11.0.110])",
+      "driver": "IEDriverServer.exe (3.141.5.12)"
+    },
+    "firefox": {
+      "description": "Firefox",
+      "browser": "Mozilla Firefox Release (66.0.1)",
+      "driver": "geckodriver.exe (0.24)"
+    },
+    "firefoxnightly": {
+      "description": "Firefox Nightly",
+      "browser": "Mozilla Firefox Nightly (68.0a1 [2019-03-27])",
+      "driver": "geckodriver.exe (0.24)"
+    },
+    "chrome": {
+      "description": "Chrome Stable (OSS protocol mode)",
+      "browser": "Google Chrome (73.0.3683.86)",
+      "driver": "chromedriver.exe (73.0.3683.68)"
+    },
+    "chromespec": {
+      "description": "Chrome Stable (W3C protocol mode)",
+      "browser": "Google Chrome (73.0.3683.86)",
+      "driver": "chromedriver.exe (73.0.3683.68)"
+    },
+    "chromedev": {
+      "description": "Chrome Dev (W3C protocol mode)",
+      "browser": "Google Chrome (75.0.3745.4)",
+      "driver": "chromedriver.exe (75.0.3749.0)"
+    },
+    "edge": {
+      "description": "Edge",
+      "browser": "Microsoft Edge (44.18362.1.0/EdgeHTML 18.18362)",
+      "driver": "MicrosoftWebDriver.exe (18362)"
+    },
+    "safari": {
+      "description": "Safari",
+      "browser": "Apple Safari (Version 12.1, WebKit 14607.1.40.1.4)",
+      "driver": "safaridriver (12.1)"
+    },
+    "safaritechpreview": {
+      "description": "Safari Tech Preview",
+      "browser": "Apple Safari Technology Preview Release 78 (Safari 12.2, WebKit 14608.1.9.1)",
+      "driver": "safaridriver (12.2)"
+    }
+  }
+}
