@@ -1,13 +1,13 @@
 module.exports = class WptTestCaseResult {
   constructor(fileName, resultObject) {
     function fixStatus(originalStatus) {
-      if (originalStatus.toLowerCase() == 'pass') {
+      if (originalStatus.toLowerCase() === 'pass') {
         return 'passed';
       }
-      if (originalStatus.toLowerCase() == 'fail') {
+      if (originalStatus.toLowerCase() === 'fail') {
         return 'failed';
       }
-      if (originalStatus.toLowerCase() == 'error') {
+      if (originalStatus.toLowerCase() === 'error') {
         return 'error';
       }
     }
@@ -15,7 +15,7 @@ module.exports = class WptTestCaseResult {
     this.modulename = fileName;
     this.testname = resultObject['name'];
     this.fullname = fileName + '/' + resultObject['name'];
-    if (this.status == 'failed') {
+    if (this.status === 'failed') {
       this.reason = resultObject['message'];
     } else {
       this.reason = 'passed';
