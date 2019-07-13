@@ -1,0 +1,57 @@
+{
+  "rundate": "12 July 2019",
+  "commit": "93af4ca5698cf5359d90be6e2bf533d81bc42f98",
+  "windowsVersion": "Windows 10, Insider build 18936",
+  "macOSVersion": "macOS Mojave (10.14.5)",
+  "notes": [
+    "Tests are no longer tracking Google Chrome using the OSS protocol dialect, as Chrome 75 moved to the W3C dialect by default",
+    "Tests are now tracking the Chromium-based Microsoft Edge, using its Dev Channel, and EdgeHTML-based Edge is now referred to as Edge (Legacy)" 
+  ],
+  "browsers": {
+    "ie": {
+      "description": "IE",
+      "browser": "Microsoft Internet Explorer (11.1000.18936.0 [11.0.130])",
+      "driver": "IEDriverServer.exe (3.141.59.2)"
+    },
+    "firefox": {
+      "description": "Firefox",
+      "browser": "Mozilla Firefox Release (68.0)",
+      "driver": "geckodriver.exe (0.24)"
+    },
+    "firefoxnightly": {
+      "description": "Firefox Nightly",
+      "browser": "Mozilla Firefox Nightly (70.0a1 [2019-07-11])",
+      "driver": "geckodriver.exe (0.24)"
+    },
+    "chrome": {
+      "description": "Chrome Stable",
+      "browser": "Google Chrome (75.0.3770.100)",
+      "driver": "chromedriver.exe (75.0.3770.90)"
+    },
+    "chromedev": {
+      "description": "Chrome Dev",
+      "browser": "Google Chrome (77.0.3833.0)",
+      "driver": "chromedriver.exe (77.0.3851.0)"
+    },
+    "edge": {
+      "description": "Edge (Chromium)",
+      "browser": "Microsoft Edge (77.0.211.3)",
+      "driver": "MSEdgeDriver.exe (77.0.217.0)"
+    },
+    "edgelegacy": {
+      "description": "Edge (Legacy)",
+      "browser": "Microsoft Edge (44.18936.1000.0/EdgeHTML 18.18936)",
+      "driver": "MicrosoftWebDriver.exe (18936)"
+    },
+    "safari": {
+      "description": "Safari",
+      "browser": "Apple Safari (12.1.1, WebKit 14607.2.6.1.1)",
+      "driver": "safaridriver (12.1.1)"
+    },
+    "safaritechpreview": {
+      "description": "Safari Tech Preview",
+      "browser": "Apple Safari Technology Preview Release 87 (Safari 13.0, WebKit 14608.1.33.1)",
+      "driver": "safaridriver (13)"
+    }
+  }
+}
